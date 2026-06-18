@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h2>Admin Panel</h2>
+
+{% for row in data %}
+
+<div class="card">
+
+<p><b>Name:</b> {{ row[1] }}</p>
+<p><b>Phone:</b> {{ row[2] }}</p>
+<p><b>Level:</b> {{ row[3] }}</p>
+<p><b>Status:</b> {{ row[5] }}</p>
+
+<a href="/approve/{{ row[0] }}">
+    <button class="green">Approve</button>
+</a>
+
+<a href="/reject/{{ row[0] }}">
+    <button class="red">Reject</button>
+</a>
+
+<a href="/result/{{ row[0] }}">
+    <button>View</button>
+</a>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</body>
+</html>
