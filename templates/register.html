@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Register</title>
+<meta charset="UTF-8">
+<title>Register</title>
+<link rel="stylesheet" href="/static/style.css">
 </head>
+
 <body>
+
+<div class="container">
 
 <h2>Registration Form</h2>
 
-<form action="/status">
-    <input placeholder="Full Name"><br><br>
-    <input placeholder="WhatsApp Number"><br><br>
-    <button type="submit">Submit</button>
+<form method="POST" action="/submit">
+
+<input name="name" placeholder="Full Name" required><br><br>
+
+<input name="phone" placeholder="WhatsApp Number" required><br><br>
+
+<select name="level">
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+</select><br><br>
+
+<textarea name="reason" placeholder="Why do you want to join?" required></textarea><br><br>
+
+<button type="submit">Submit Application</button>
+
 </form>
+
+</div>
 
 </body>
 </html>
