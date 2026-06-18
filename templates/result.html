@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Result</title>
+<title>Application Status</title>
 <link rel="stylesheet" href="/static/style.css">
 </head>
 
@@ -12,18 +12,30 @@
 
 {% if user[5] == 'approved' %}
 
-<h2>Congratulations 🎉 Approved</h2>
-<a href="{{ user[6] }}"><button>Join WhatsApp Group</button></a>
+<h2>🎉 Congratulations!</h2>
+<p>Your application has been approved.</p>
+
+<a href="{{ user[6] }}" target="_blank">
+    <button>Join WhatsApp Group</button>
+</a>
 
 {% elif user[5] == 'rejected' %}
 
-<h2>Sorry ❌ Not Approved</h2>
+<h2>❌ Sorry</h2>
+<p>Your application was not approved.</p>
 
 {% else %}
 
-<h2>Pending ⏳</h2>
+<h2>⏳ Application Pending</h2>
+<p>Please wait for admin review.</p>
 
 {% endif %}
+
+<br><br>
+
+<a href="/">
+    <button>Back Home</button>
+</a>
 
 </div>
 
