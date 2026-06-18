@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Panel</title>
-    <link rel="stylesheet" href="/static/style.css">
+<meta charset="UTF-8">
+<title>Admin Panel</title>
+<link rel="stylesheet" href="/static/style.css">
 </head>
+
 <body>
 
 <div class="container">
@@ -19,17 +21,8 @@
 <p><b>Level:</b> {{ row[3] }}</p>
 <p><b>Status:</b> {{ row[5] }}</p>
 
-<a href="/approve/{{ row[0] }}">
-    <button class="green">Approve</button>
-</a>
-
-<a href="/reject/{{ row[0] }}">
-    <button class="red">Reject</button>
-</a>
-
-<a href="/result/{{ row[0] }}">
-    <button>View</button>
-</a>
+<a href="/approve/{{ row[0] }}"><button class="green">Approve</button></a>
+<a href="/reject/{{ row[0] }}"><button class="red">Reject</button></a>
 
 </div>
 
