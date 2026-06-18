@@ -1,0 +1,48 @@
+body{
+    background: linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+    font-family:Arial;
+    text-align:center;
+}
+
+.container{
+    margin-top:80px;
+}
+
+h1{
+    font-size:40px;
+    color:#38bdf8;
+}
+
+input, select, textarea{
+    padding:12px;
+    margin:10px;
+    width:250px;
+    border-radius:10px;
+    border:none;
+}
+
+button{
+    padding:12px 25px;
+    margin:10px;
+    border:none;
+    border-radius:10px;
+    background:#38bdf8;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0ea5e9;
+}
+
+.card{
+    background:#1e293b;
+    padding:15px;
+    margin:10px;
+    border-radius:10px;
+}
+
+.green{background:green;}
+.red{background:red;}
