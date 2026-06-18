@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Result</title>
-    <link rel="stylesheet" href="/static/style.css">
+<meta charset="UTF-8">
+<title>Result</title>
+<link rel="stylesheet" href="/static/style.css">
 </head>
+
 <body>
 
 <div class="container">
 
 {% if user[5] == 'approved' %}
 
-<h2>🎉 Congratulations, Approved!</h2>
-
-<a href="{{ user[6] }}">
-    <button>Join WhatsApp Group</button>
-</a>
+<h2>Congratulations 🎉 Approved</h2>
+<a href="{{ user[6] }}"><button>Join WhatsApp Group</button></a>
 
 {% elif user[5] == 'rejected' %}
 
-<h2>❌ Sorry, Not Approved</h2>
+<h2>Sorry ❌ Not Approved</h2>
 
 {% else %}
 
-<h2>⏳ Pending Approval</h2>
+<h2>Pending ⏳</h2>
 
 {% endif %}
 
