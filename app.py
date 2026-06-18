@@ -90,7 +90,7 @@ def approve(id):
     conn = sqlite3.connect("database.db")
     c = conn.cursor()
 
-    link = "https://chat.whatsapp.com/YOUR_GROUP_LINK"
+    link = "https://chat.whatsapp.com/KPvURPn4n0UGlfhTbZDjZC"
 
     c.execute("""
     UPDATE applicants
