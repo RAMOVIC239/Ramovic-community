@@ -61,7 +61,7 @@ def submit():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        if request.form["username"] == "admin" and request.form["password"] == "1234":
+        if request.form["username"] == "Ramovic" and request.form["password"] == "11223344":
             session["admin"] = True
             return redirect("/admin")
         return "Wrong login ❌"
