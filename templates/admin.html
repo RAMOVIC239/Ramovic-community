@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>RAMOVIC COMMUNITY - Admin Dashboard</title>
+
 <link rel="stylesheet" href="/static/style.css">
+
 </head>
 
 <body>
@@ -13,51 +17,120 @@
 
 <h1>🚀 RAMOVIC ADMIN DASHBOARD</h1>
 
-<p>Manage Applications and Community Members</p>
+<p>
+Manage Community Applications and Members
+</p>
 
 <br>
 
 {% if data %}
 
-    {% for row in data %}
+<h2>
+📋 Total Applications: {{ data|length }}
+</h2>
 
-    <div class="card">
+<br>
 
-        <h2>👤 {{ row[1] }}</h2>
+{% for row in data %}
 
-        <p><b>📱 WhatsApp:</b> {{ row[2] }}</p>
+<div class="card">
 
-        <p><b>💻 Level:</b> {{ row[3] }}</p>
+<h2>👤 {{ row[1] }}</h2>
 
-        <p><b>📝 Reason:</b> {{ row[4] }}</p>
+<p>
+<b>📱 WhatsApp:</b> {{ row[2] }}
+</p>
 
-        <p><b>📊 Status:</b> {{ row[5] }}</p>
+<p>
+<b>💻 Level:</b> {{ row[3] }}
+</p>
 
-        <a href="/approve/{{ row[0] }}">
-            <button class="green">✅ Approve</button>
-        </a>
+<p>
+<b>📝 Reason:</b>
+</p>
 
-        <a href="/reject/{{ row[0] }}">
-            <button class="red">❌ Reject</button>
-        </a>
+<p>
+{{ row[4] }}
+</p>
 
-    </div>
+{% if row[5] == 'approved' %}
 
-    {% endfor %}
+<p class="success">
+✅ Approved
+</p>
+
+{% elif row[5] == 'rejected' %}
+
+<p class="danger">
+❌ Rejected
+</p>
 
 {% else %}
 
-<h2>No Applications Yet</h2>
+<p class="warning">
+⏳ Pending Review
+</p>
 
 {% endif %}
 
 <br>
 
+<a href="/approve/{{ row[0] }}">
+<button class="green">
+✅ Approve
+</button>
+</a>
+
+<a href="/reject/{{ row[0] }}">
+<button class="red">
+❌ Reject
+</button>
+</a>
+
+<a href="/result/{{ row[0] }}">
+<button class="status-btn">
+👁 View Result
+</button>
+</a>
+
+</div>
+
+{% endfor %}
+
+{% else %}
+
+<div class="status-card">
+
+<h2>
+📭 No Applications Yet
+</h2>
+
+<p>
+Applications submitted by users will appear here.
+</p>
+
+</div>
+
+{% endif %}
+
+<br><br>
+
 <a href="/logout">
-    <button>Logout</button>
+<button class="admin-btn">
+🔓 Logout
+</button>
+</a>
+
+<br><br>
+
+<a href="/">
+<button>
+🏠 Back Home
+</button>
 </a>
 
 </div>
 
 </body>
+
 </html>
