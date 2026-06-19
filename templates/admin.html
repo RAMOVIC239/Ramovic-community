@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Admin Panel</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAMOVIC COMMUNITY - Admin Dashboard</title>
 <link rel="stylesheet" href="/static/style.css">
 </head>
 
@@ -10,25 +12,31 @@
 
 <div class="container">
 
-<h2>Admin Panel</h2>
+<h1>🚀 RAMOVIC ADMIN DASHBOARD</h1>
+
+<p>Manage Applications and Community Members</p>
+
+<br>
+
+{% if data %}
 
 {% for row in data %}
 
 <div class="card">
 
-<p><b>Name:</b> {{ row[1] }}</p>
-<p><b>Phone:</b> {{ row[2] }}</p>
-<p><b>Level:</b> {{ row[3] }}</p>
-<p><b>Status:</b> {{ row[5] }}</p>
+<h2>👤 {{ row[1] }}</h2>
 
-<a href="/approve/{{ row[0] }}"><button class="green">Approve</button></a>
-<a href="/reject/{{ row[0] }}"><button class="red">Reject</button></a>
+<p><b>📱 WhatsApp:</b> {{ row[2] }}</p>
 
-</div>
+<p><b>💻 Level:</b> {{ row[3] }}</p>
 
-{% endfor %}
+<p><b>📝 Reason:</b> {{ row[4] }}</p>
 
-</div>
+<p><b>📊 Status:</b> {{ row[5] }}</p>
 
-</body>
-</html>
+<br>
+
+<a href="/approve/{{ row[0] }}">
+    <button class="join-btn">
+        ✅ Approve
+    </
