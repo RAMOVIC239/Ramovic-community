@@ -1,41 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 <meta charset="UTF-8">
-<title>Application Status</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Application Status - RAMOVIC COMMUNITY</title>
+
 <link rel="stylesheet" href="/static/style.css">
+
 </head>
 
 <body>
 
 <div class="container">
 
+<div class="status-card">
+
 {% if user[5] == 'approved' %}
 
-<h2>🎉 Congratulations!</h2>
-<p>Your application has been approved.</p>
+<h1 class="success">
+🎉 Congratulations!
+</h1>
+
+<h2>
+✅ Application Approved
+</h2>
+
+<p>
+Your application has been successfully approved.
+</p>
+
+<p>
+Welcome to RAMOVIC COMMUNITY.
+</p>
+
+<br>
 
 <a href="{{ user[6] }}" target="_blank">
-    <button>Join WhatsApp Group</button>
+<button class="join-btn">
+💬 Join WhatsApp Group
+</button>
 </a>
 
 {% elif user[5] == 'rejected' %}
 
-<h2>❌ Sorry</h2>
-<p>Your application was not approved.</p>
+<h1 class="danger">
+❌ Application Rejected
+</h1>
+
+<p>
+Unfortunately, your application was not approved.
+</p>
+
+<p>
+You may apply again in the future.
+</p>
 
 {% else %}
 
-<h2>⏳ Application Pending</h2>
-<p>Please wait for admin review.</p>
+<h1 class="warning">
+⏳ Application Pending
+</h1>
+
+<p>
+Your application is currently under review.
+</p>
+
+<p>
+Please check again later.
+</p>
 
 {% endif %}
 
 <br><br>
 
 <a href="/">
-    <button>Back Home</button>
+<button>
+🏠 Back Home
+</button>
 </a>
+
+</div>
 
 </div>
 
