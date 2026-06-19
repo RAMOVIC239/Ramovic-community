@@ -1,76 +1,57 @@
+
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>RAMOVIC PROGRAMMING COMMUNITY</title>
-
+<title>RAMOVIC COMMUNITY - Admin Login</title>
 <link rel="stylesheet" href="/static/style.css">
-
 </head>
 
 <body>
 
-<div class="hero">
+<div class="container status-card">
 
-```
-<div class="overlay">
+<h1>🔐 Admin Panel</h1>
 
-    <h1 class="title">
-        RAMOVIC PROGRAMMING COMMUNITY
-    </h1>
+<p>
+RAMOVIC PROGRAMMING COMMUNITY
+</p>
 
-    <p class="subtitle">
-        Empowering Future Programmers Worldwide 🚀
-    </p>
+<form method="POST">
 
-    <p class="description">
-        Learn Programming • Build Projects • Join Developers • Grow Your Career
-    </p>
+<input
+type="text"
+name="username"
+placeholder="👤 Username"
+required>
 
-    <div class="buttons">
+<br><br>
 
-        <a href="/register">
-            <button class="join-btn">
-                🚀 Join Community
-            </button>
-        </a>
+<input
+type="password"
+name="password"
+placeholder="🔑 Password"
+required>
 
-        <a href="/login">
-            <button class="admin-btn">
-                🔐 Admin Login
-            </button>
-        </a>
+<br><br>
 
-    </div>
+<button type="submit" class="admin-btn">
+🔐 Login
+</button>
+
+</form>
+
+<br><br>
+
+<a href="/">
+<button>
+🏠 Back Home
+</button>
+</a>
 
 </div>
-```
-
-</div>
-
-<section class="features">
-
-```
-<div class="card">
-    <h2>💻 Learn Coding</h2>
-    <p>Master Python, C, C++, Web Development and more.</p>
-</div>
-
-<div class="card">
-    <h2>🚀 Build Projects</h2>
-    <p>Create real-world applications and gain experience.</p>
-</div>
-
-<div class="card">
-    <h2>🌍 Connect</h2>
-    <p>Meet developers from different places and learn together.</p>
-</div>
-```
-
-</section>
 
 </body>
 </html>
