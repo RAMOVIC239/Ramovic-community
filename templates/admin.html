@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 <head>
 <meta charset="UTF-8">
@@ -20,23 +19,45 @@
 
 {% if data %}
 
-{% for row in data %}
+    {% for row in data %}
 
-<div class="card">
+    <div class="card">
 
-<h2>👤 {{ row[1] }}</h2>
+        <h2>👤 {{ row[1] }}</h2>
 
-<p><b>📱 WhatsApp:</b> {{ row[2] }}</p>
+        <p><b>📱 WhatsApp:</b> {{ row[2] }}</p>
 
-<p><b>💻 Level:</b> {{ row[3] }}</p>
+        <p><b>💻 Level:</b> {{ row[3] }}</p>
 
-<p><b>📝 Reason:</b> {{ row[4] }}</p>
+        <p><b>📝 Reason:</b> {{ row[4] }}</p>
 
-<p><b>📊 Status:</b> {{ row[5] }}</p>
+        <p><b>📊 Status:</b> {{ row[5] }}</p>
+
+        <a href="/approve/{{ row[0] }}">
+            <button class="green">✅ Approve</button>
+        </a>
+
+        <a href="/reject/{{ row[0] }}">
+            <button class="red">❌ Reject</button>
+        </a>
+
+    </div>
+
+    {% endfor %}
+
+{% else %}
+
+<h2>No Applications Yet</h2>
+
+{% endif %}
 
 <br>
 
-<a href="/approve/{{ row[0] }}">
-    <button class="join-btn">
-        ✅ Approve
-    </
+<a href="/logout">
+    <button>Logout</button>
+</a>
+
+</div>
+
+</body>
+</html>
