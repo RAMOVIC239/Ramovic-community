@@ -1,46 +1,56 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>RAMOVIC COMMUNITY - Registration</title>
+
 <link rel="stylesheet" href="/static/style.css">
+
 </head>
 
 <body>
 
 <div class="container">
 
-<h1>🚀 RAMOVIC PROGRAMMING COMMUNITY</h1>
+<div class="status-card">
+
+<h1>🚀 RAMOVIC COMMUNITY</h1>
 
 <h2>Programmer Registration Form</h2>
 
 <p>
-Join a community of developers, learners, and innovators.
+Join a professional community of programmers,
+developers and technology enthusiasts.
 </p>
+
+<br>
 
 <form method="POST" action="/submit">
 
 <input
 type="text"
 name="name"
-placeholder="👤 Full Name"
+placeholder="👤 Enter Full Name"
 required>
 
-<br><br>
+<br>
 
 <input
 type="text"
 name="phone"
-placeholder="📱 WhatsApp Number"
+placeholder="📱 Enter WhatsApp Number"
 required>
 
-<br><br>
+<br>
 
 <select name="level" required>
 
-<option value="">💻 Select Programming Level</option>
+<option value="">
+💻 Select Programming Level
+</option>
 
 <option>Beginner</option>
 
@@ -50,15 +60,15 @@ required>
 
 </select>
 
-<br><br>
+<br>
 
 <textarea
 name="reason"
 rows="6"
-placeholder="✍️ Why do you want to join RAMOVIC Programming Community?"
+placeholder="✍️ Tell us why you want to join RAMOVIC COMMUNITY"
 required></textarea>
 
-<br><br>
+<br>
 
 <button type="submit" class="join-btn">
 🚀 Submit Application
@@ -66,7 +76,7 @@ required></textarea>
 
 </form>
 
-<br><br>
+<br>
 
 <a href="/">
 <button>
@@ -75,6 +85,33 @@ required></textarea>
 </a>
 
 </div>
+
+</div>
+
+<section class="features">
+
+<div class="card">
+<h2>💻 Learn</h2>
+<p>
+Access programming resources and practical tutorials.
+</p>
+</div>
+
+<div class="card">
+<h2>🚀 Build</h2>
+<p>
+Work on projects and improve your coding skills.
+</p>
+</div>
+
+<div class="card">
+<h2>🌍 Connect</h2>
+<p>
+Meet other programmers and grow your network.
+</p>
+</div>
+
+</section>
 
 </body>
 </html>
