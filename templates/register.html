@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Register</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAMOVIC COMMUNITY - Registration</title>
 <link rel="stylesheet" href="/static/style.css">
 </head>
 
@@ -10,25 +12,67 @@
 
 <div class="container">
 
-<h2>Registration Form</h2>
+<h1>🚀 RAMOVIC PROGRAMMING COMMUNITY</h1>
+
+<h2>Programmer Registration Form</h2>
+
+<p>
+Join a community of developers, learners, and innovators.
+</p>
 
 <form method="POST" action="/submit">
 
-<input name="name" placeholder="Full Name" required><br><br>
+<input
+type="text"
+name="name"
+placeholder="👤 Full Name"
+required>
 
-<input name="phone" placeholder="WhatsApp Number" required><br><br>
+<br><br>
 
-<select name="level">
+<input
+type="text"
+name="phone"
+placeholder="📱 WhatsApp Number"
+required>
+
+<br><br>
+
+<select name="level" required>
+
+<option value="">💻 Select Programming Level</option>
+
 <option>Beginner</option>
+
 <option>Intermediate</option>
+
 <option>Advanced</option>
-</select><br><br>
 
-<textarea name="reason" placeholder="Why do you want to join?" required></textarea><br><br>
+</select>
 
-<button type="submit">Submit Application</button>
+<br><br>
+
+<textarea
+name="reason"
+rows="6"
+placeholder="✍️ Why do you want to join RAMOVIC Programming Community?"
+required></textarea>
+
+<br><br>
+
+<button type="submit" class="join-btn">
+🚀 Submit Application
+</button>
 
 </form>
+
+<br><br>
+
+<a href="/">
+<button>
+🏠 Back Home
+</button>
+</a>
 
 </div>
 
